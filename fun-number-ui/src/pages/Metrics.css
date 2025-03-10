@@ -1,0 +1,20 @@
+.metrics-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .metrics-display {
+    background: #222;
+    color: #0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  

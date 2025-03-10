@@ -1,0 +1,35 @@
+.classify-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .classify-container form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .classify-container input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .classify-container button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .result {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
