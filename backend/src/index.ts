@@ -31,7 +31,7 @@ const limiter = rateLimit({
 
 const io = new Server(httpServer, {
     cors: {
-        origin: 'http://localhost:5173', // Allow frontend to connect
+        origin: 'https://fun-fact-apis-1.onrender.com', // Allow frontend to connect
         methods: ['GET', 'POST']
     }
 });
