@@ -27,7 +27,7 @@ const ClassifyNumber: React.FC = () => {
 
         try {
 
-            const response = await fetch(`https://fun-fact-apis.onrender.com?number=${number}`, { method: 'GET' });
+            const response = await fetch(`https://fun-fact-apis.onrender.com/api/classify-number?number=${number}`, { method: 'GET' });
             
             if (!response.ok) {
                 const errData = await response.json();
