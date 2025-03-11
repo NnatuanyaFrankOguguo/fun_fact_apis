@@ -8,10 +8,8 @@ import { createServer } from "http"; // Create an HTTP server
 import { Server } from "socket.io"; // Socket.IO server setup
 import client from "prom-client"
 import { setupSwagger } from './swagger';
-import  router  from './routes/funFacts';
 import rateLimit from 'express-rate-limit';
 import { query, validationResult } from 'express-validator';
-import helmet from 'helmet';
 import logger from "./logger";
 import fs from 'fs';
 import path from 'path';
@@ -124,8 +122,6 @@ app.get('/api/logs', (req: Request, res: Response) => {
         res.status(200).json({logs : data})
     })
 })
-
-app.use('/api/v1', router);
 
 // ✅ WebSocket connection event
 io.on("connection", (socket) => {
