@@ -14,7 +14,7 @@ const Apilogs: React.FC = () => {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/logs');
+        const res = await fetch('https://fun-fact-apis.onrender.com/logs');
         if (!res.ok){
           throw new Error('Failed to fetch logs');
         }

@@ -10,7 +10,7 @@ const Metrics: React.FC = () => {
     useEffect(() => {
         const fetchMetrics = async () => {
             try {
-                const res = await fetch('http://localhost:5000/metrics');
+                const res = await fetch('https://fun-fact-apis.onrender.com/metrics');
                 if(!res.ok) {
                     throw new Error('Failed to fetch metrics');
                 }
