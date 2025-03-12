@@ -1,6 +1,7 @@
 
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
+import cors from "cors";
 import { isPrime, isArmstrong, isPerfectSqr, getFunFact, isFibonacci, isPalindrome, sumOfDivisors, isAbundant, isDeficient } from "./utils";
 
 const typeDefs = `#graphql
@@ -48,7 +49,8 @@ const resolvers = {
     };
 
 export const createGraphQLServer = async (app: express.Application) => {
-  const server = new ApolloServer({ typeDefs, resolvers });
+  const server = new ApolloServer({ typeDefs, resolvers,   introspection: true, });
   await server.start();
+  app.use(cors({ origin: "*" })); // Allow requests from any domain
   server.applyMiddleware({ app, path: '/graphql' });
 };
