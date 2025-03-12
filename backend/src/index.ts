@@ -37,7 +37,7 @@ const io = new Server(httpServer, {
 });
 
 // Initialize GraphQL and pass both `app` and `httpServer`
-createGraphQLServer(app, httpServer);
+createGraphQLServer(app);
 
 // Enable CORS for HTTP requests
 app.use(cors());

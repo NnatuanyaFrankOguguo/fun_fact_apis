@@ -1,86 +1,105 @@
-# Fun Fact API
+# 📊 Fun Number Classifier API
 
-## Overview
+A powerful backend API for **classifying numbers** with REST, GraphQL, and real-time WebSocket support.  
+Includes **Swagger API docs**, **rate limiting**, **Prometheus metrics**, **logging**, and a **CI/CD pipeline with Docker support**.  
+Perfect for exploring modern backend practices.
 
-The **Fun Fact API** provides interesting facts about numbers. Users can query the API with a number as a query parameter, and it returns a fun fact related to that number.
+---
 
-## Features
+## 🚀 Features
 
-- Retrieve fun facts about numbers
-- Simple and easy-to-use API
-- Built using Node.js, Express, and TypeScript
-- Dockerized for easy deployment
+- ✅ REST API to classify numbers.
+- ✅ GraphQL API alternative.
+- ✅ Real-time classification updates via WebSockets.
+- ✅ API documentation with Swagger.
+- ✅ Rate limiting to prevent abuse.
+- ✅ Request/response logging system.
+- ✅ Prometheus endpoint for metrics and monitoring.
+- ✅ CI/CD Pipeline using GitHub Actions.
+- ✅ Dockerized for easy deployment.
+- ✅ Hosted live on Render.
 
-## Installation
+---
 
-1. Clone the repository:
+## 🛠️ Getting Started
 
-   ```sh
-   git clone https://github.com/nnatuanyafrankoguguo/fun_fact_api.git
-   cd fun_fact_api
-   ```
+### 1. Clone the Repository
 
-2. Install dependencies:
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 
-   ```sh
-   npm install
-   ```
 
-3. Run the development server:
+2. Install Dependencies (Backend)
 
-   ```sh
-   npm run dev
-   ```
+cd backend
+npm install
 
-4. To build and run the production server:
+3. Run the Backend Server
 
-   ```sh
-   npm run build
-   npm start
-   ```
+npm run dev
+The server will run on http://localhost:5000
 
-## Using Docker
+🧪 Testing the API
+REST Endpoint:
 
-To build and run the API using Docker:
+GET http://localhost:5000/api/classify-number?number=10
 
-1. Build the Docker image:
-   ```sh
-   docker build -t fun_fact_api .
-   ```
-2. Run the container:
-   ```sh
-   docker run -p 3000:3000 fun_fact_api
-   ```
+WebSocket:
+Connect to: ws://localhost:5000 to receive real-time classification updates.
 
-## API Usage
+Swagger Documentation:
 
-### Endpoint: `/api/classify-number`
+http://localhost:5000/api-docs
 
-#### Method: `GET`
+GraphQL Playground:
 
-#### Query Parameter:
+http://localhost:5000/graphql
 
-- `number` (required): The number for which you want to get a fun fact.
+Logs Endpoint:
 
-#### Example Request:
+GET http://localhost:5000/api/logs
 
-```
-GET http://localhost:3000/api/classify-number?number=7
-```
+🐳 Running with Docker
+1. Build and Run the App
 
-#### Example Response:
+docker-compose up --build
 
-```json
-{
-  "number": 7,
-  "fact": "7 is considered a lucky number in many cultures."
-}
-```
+Exposes backend on http://localhost:5000
 
-## Contribution
+✅ Running Tests
 
-Feel free to contribute by submitting issues or pull requests.
+npm test
 
-## License
+🚨 Rate Limiting
+Each IP: 100 requests per 15 minutes
 
+📈 Prometheus Metrics
+
+http://localhost:5000/metrics
+
+🔗 [Website Url](https://fun-fact-apis-1.onrender.com)
+
+📂 Project Structure
+
+root/
+│
+├── backend/        # Express Backend API
+│   ├── routes/     # API routes
+│   ├── graphql/    # GraphQL setup
+│   ├── logger/     # Winston logger
+│   ├── swagger/    # API documentation
+│   ├── Dockerfile  # Dockerfile for backend
+│   └── ...         
+│
+├── fun-number-ui/       
+│
+└── docker-compose.yml  # Docker orchestration
+🤝 Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+📜 License
 This project is licensed under the MIT License.
+---
+
+Let me know if you want to add **frontend instructions**, **badges**, or **contributing guidelines** as well! 🚀
