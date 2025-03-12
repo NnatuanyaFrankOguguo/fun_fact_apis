@@ -26,8 +26,8 @@ Perfect for exploring modern backend practices.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone [https://github.com/your-username/your-repo.git](https://github.com/NnatuanyaFrankOguguo/fun_fact_apis.git)
+cd [https://github.com/NnatuanyaFrankOguguo/fun_fact_apis.gi](https://github.com/NnatuanyaFrankOguguo/fun_fact_apis.git)
 
 
 2. Install Dependencies (Backend)
