@@ -44,10 +44,6 @@ app.use(cors());
 app.use(express.json());
 app.use(compression())
 app.use(limiter);
-app.use((req, res, next) => {
-    res.setHeader("Connection", "keep-alive");
-    next();
-  });
 
 setupSwagger(app); // Set up Swagger documentation
 // Prometheus client setup
